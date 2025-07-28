@@ -1,11 +1,25 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
-// 엔터 쳤을 때, 작동 되게 하는 함수
+// IME 조합 중 여부 플래그
+let isComposing = false;
+inputBox.addEventListener("compositionstart", function () {
+  isComposing = true;
+});
+inputBox.addEventListener("compositionend", function () {
+  isComposing = false;
+});
+
+// 엔터 입력 시(조합 중이 아닐 때만)
 inputBox.addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
+  if (e.key === "Enter" && !isComposing) {
     addTask();
   }
+});
+
+// Add 버튼 클릭 시(중복 방지, HTML의 onclick 제거 필요)
+document.querySelector(".row button").addEventListener("click", function () {
+  addTask();
 });
 
 function saveData() {
