@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🗓️ 내가 해야 할 일! 🗓️</title>
+    <link rel="stylesheet" href="style.css" class="rel" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container-clock">
+        <div class="clock">
+          <span id="period" style="font-size: 30px">AM</span>
+
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        </div>
+      </div>
+      <div class="container-todo">
+        <div class="todo-app">
+          <h2>To-Do List 📝</h2>
+          <div class="row">
+            <input
+              type="text"
+              id="input-box"
+              placeholder="할 일을 적어주세요."
+            />
+            <button onclick="addTask()">Add</button>
+          </div>
+          <ul id="list-container"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
