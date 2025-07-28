@@ -12,6 +12,12 @@
 
 ---
 
+## 🔗 배포 링크
+
+- 👉 [To-Do List 바로가기](https://chaehyeon119.github.io/2025-javascript-todolist/)
+
+---
+
 ## 🛠 사용 기술
 
 - HTML
